@@ -7,20 +7,12 @@ this.length3=5}
 
 
 area1(){
-    let area=0.5*this.length1*this.length2
-    return area
+    let s=(this.length1 + this.length2 + this.length3) / 2;
+    return Math.round(Math.sqrt(s * (s - this.length1) *
+                    (s - this.length2) * (s - this.length3)))
 }
-area2(){
-    let area=0.5*this.length1*this.length3
-    return area
-}
-area3(){
-    let area=0.5*this.length3*this.length2
-    return area
-}
+
 
 }
 let area= new Area()
 console.log(area.area1())
-console.log(area.area2())
-console.log(area.area3())
